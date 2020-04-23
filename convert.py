@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import csv
-f = open('./fav.csv')
+import csv,glob
+path = "./favourites*.csv"
+filename = glob.glob(path)[0]
+f = open(filename)
 
 fn = csv.reader(f)
 
